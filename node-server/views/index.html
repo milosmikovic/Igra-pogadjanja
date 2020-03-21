@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src = "dinamicHtml.js"> </script>
+</head>
+
+<body>
+<form id="forma">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" ><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" ><br><br>
+    <input type="button" value="Start" id = "submit" onclick=on_submit() >
+</form>
+<div id="timer"> </div>
+<button type="button" id = "show-res" onclick=show_scores()>Show scores!</button>
+<button type="button" id = "game-reset" onclick=reset_game()>Restart game!</button>
+<section class="mem-game" id = "memory-game">
+        <script> drawBoard(); </script>
+    </section>
+    
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

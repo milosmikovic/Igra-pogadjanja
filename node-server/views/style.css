@@ -1,0 +1,119 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;   
+}
+
+body{
+    /* 100 posto vidnog polja na stranici */
+    height: 100vh;
+    display: flex;
+    /*background: #060AB2;*/
+    background: #ffc9df;
+}
+
+.mem-game{
+    width: 640px;
+    height: 640px;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;    
+    perspective: 1000px;
+    /* border: 2px solid lime; */
+}
+.mem-card{
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    position: relative;
+    margin:5px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    /* border: 2px solid aqua; */
+}
+
+.mem-card:active {
+    transform: scale(.90);
+    transition: transform .2s;
+}
+
+.mem-card.flip{
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    background: lightblue;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    /* border: 2px solid deeppink; */
+}
+
+.front-face{
+    transform: rotateY(180deg);
+}
+
+#timer {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 2px;
+    text-align: center;
+    background-color: lightblue;
+    border-radius: 30px;
+    top:80px;
+    left:250px;
+}
+#show-res{
+    height: 40px;
+    weight: 40px;
+    border: 2px solid black;
+    padding: 2px;
+    margin: 2px;
+}
+#game-reset{
+    height: 40px;
+    weight: 40px;
+    border: 2px solid black;
+    padding: 2px;
+    margin: 2px;
+}
+#fname{
+    width: 150px;
+    height: 25px;
+}
+#lname{
+    width: 150px;
+    height: 25px;
+}
+#submit {
+    width: 150px;
+    height: 50px;
+    background-color: lightblue;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: black;
+}
+
+#show-res{
+    width: 150px;
+    height: 50px;
+    background-color: lightblue;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: black;
+}
+#game-reset{
+    width: 150px;
+    height: 50px;
+    background-color: lightblue;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: black;
+}
